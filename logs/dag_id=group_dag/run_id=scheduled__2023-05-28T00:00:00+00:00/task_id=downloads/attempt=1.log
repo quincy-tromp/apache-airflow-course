@@ -1,0 +1,18 @@
+[2023-05-29T13:53:17.440+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: group_dag.downloads scheduled__2023-05-28T00:00:00+00:00 [queued]>
+[2023-05-29T13:53:17.446+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: group_dag.downloads scheduled__2023-05-28T00:00:00+00:00 [queued]>
+[2023-05-29T13:53:17.447+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-05-29T13:53:17.455+0000] {taskinstance.py:1327} INFO - Executing <Task(SubDagOperator): downloads> on 2023-05-28 00:00:00+00:00
+[2023-05-29T13:53:17.459+0000] {standard_task_runner.py:57} INFO - Started process 472 to run task
+[2023-05-29T13:53:17.462+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'group_dag', 'downloads', 'scheduled__2023-05-28T00:00:00+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/group_dag.py', '--cfg-path', '/tmp/tmp0gtt9fo_']
+[2023-05-29T13:53:17.463+0000] {standard_task_runner.py:85} INFO - Job 37: Subtask downloads
+[2023-05-29T13:53:17.502+0000] {task_command.py:410} INFO - Running <TaskInstance: group_dag.downloads scheduled__2023-05-28T00:00:00+00:00 [running]> on host 07b692a3a441
+[2023-05-29T13:53:17.558+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='group_dag' AIRFLOW_CTX_TASK_ID='downloads' AIRFLOW_CTX_EXECUTION_DATE='2023-05-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-28T00:00:00+00:00'
+[2023-05-29T13:53:17.559+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-29T13:53:17.582+0000] {subdag.py:172} INFO - Created DagRun: scheduled__2023-05-28T00:00:00+00:00
+[2023-05-29T13:54:17.670+0000] {base.py:255} INFO - Success criteria met. Exiting.
+[2023-05-29T13:54:17.692+0000] {subdag.py:187} INFO - Execution finished. State is success
+[2023-05-29T13:54:17.710+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=group_dag, task_id=downloads, execution_date=20230528T000000, start_date=20230529T135317, end_date=20230529T135417
+[2023-05-29T13:54:17.765+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-05-29T13:54:17.793+0000] {taskinstance.py:2651} INFO - 1 downstream tasks scheduled from follow-on schedule check

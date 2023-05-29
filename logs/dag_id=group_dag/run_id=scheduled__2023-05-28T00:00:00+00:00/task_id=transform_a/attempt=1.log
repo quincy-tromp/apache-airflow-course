@@ -1,0 +1,17 @@
+[2023-05-29T13:54:29.192+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: group_dag.transform_a scheduled__2023-05-28T00:00:00+00:00 [queued]>
+[2023-05-29T13:54:29.199+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: group_dag.transform_a scheduled__2023-05-28T00:00:00+00:00 [queued]>
+[2023-05-29T13:54:29.200+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-05-29T13:54:29.209+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): transform_a> on 2023-05-28 00:00:00+00:00
+[2023-05-29T13:54:29.214+0000] {standard_task_runner.py:57} INFO - Started process 520 to run task
+[2023-05-29T13:54:29.218+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'group_dag', 'transform_a', 'scheduled__2023-05-28T00:00:00+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/group_dag.py', '--cfg-path', '/tmp/tmpd413ht4i']
+[2023-05-29T13:54:29.219+0000] {standard_task_runner.py:85} INFO - Job 47: Subtask transform_a
+[2023-05-29T13:54:29.279+0000] {task_command.py:410} INFO - Running <TaskInstance: group_dag.transform_a scheduled__2023-05-28T00:00:00+00:00 [running]> on host 07b692a3a441
+[2023-05-29T13:54:29.345+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='group_dag' AIRFLOW_CTX_TASK_ID='transform_a' AIRFLOW_CTX_EXECUTION_DATE='2023-05-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-28T00:00:00+00:00'
+[2023-05-29T13:54:29.346+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-05-29T13:54:29.347+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'sleep 10']
+[2023-05-29T13:54:29.357+0000] {subprocess.py:86} INFO - Output:
+[2023-05-29T13:54:39.362+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-05-29T13:54:39.394+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=group_dag, task_id=transform_a, execution_date=20230528T000000, start_date=20230529T135429, end_date=20230529T135439
+[2023-05-29T13:54:39.431+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-05-29T13:54:39.447+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

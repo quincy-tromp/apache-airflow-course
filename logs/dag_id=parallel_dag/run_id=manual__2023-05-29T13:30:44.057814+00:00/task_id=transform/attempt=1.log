@@ -1,0 +1,17 @@
+[2023-05-29T13:31:07.813+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: parallel_dag.transform manual__2023-05-29T13:30:44.057814+00:00 [queued]>
+[2023-05-29T13:31:07.819+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: parallel_dag.transform manual__2023-05-29T13:30:44.057814+00:00 [queued]>
+[2023-05-29T13:31:07.820+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2023-05-29T13:31:07.827+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): transform> on 2023-05-29 13:30:44.057814+00:00
+[2023-05-29T13:31:07.831+0000] {standard_task_runner.py:57} INFO - Started process 78 to run task
+[2023-05-29T13:31:07.834+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'parallel_dag', 'transform', 'manual__2023-05-29T13:30:44.057814+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/parallel_dag.py', '--cfg-path', '/tmp/tmpfvgda9uz']
+[2023-05-29T13:31:07.835+0000] {standard_task_runner.py:85} INFO - Job 36: Subtask transform
+[2023-05-29T13:31:07.872+0000] {task_command.py:410} INFO - Running <TaskInstance: parallel_dag.transform manual__2023-05-29T13:30:44.057814+00:00 [running]> on host 91df3efd6f6a
+[2023-05-29T13:31:07.929+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='parallel_dag' AIRFLOW_CTX_TASK_ID='transform' AIRFLOW_CTX_EXECUTION_DATE='2023-05-29T13:30:44.057814+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-05-29T13:30:44.057814+00:00'
+[2023-05-29T13:31:07.931+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-05-29T13:31:07.932+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'sleep 10']
+[2023-05-29T13:31:07.939+0000] {subprocess.py:86} INFO - Output:
+[2023-05-29T13:31:17.943+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-05-29T13:31:17.973+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=parallel_dag, task_id=transform, execution_date=20230529T133044, start_date=20230529T133107, end_date=20230529T133117
+[2023-05-29T13:31:18.026+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-05-29T13:31:18.054+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check
